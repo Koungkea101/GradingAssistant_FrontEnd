@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import AnswerAnalysis from '../../components/landing/answerAnalysis';
 
 export default function Home() {
   return (
@@ -12,13 +13,14 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Streamline Your
-            <span className="text-blue-600"> Grading Process</span>
+            Instant Grading for Your<br />
+            <span className="text-blue-600">Documentation</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Save hours of grading time with our intelligent grading assistant.
-            Get consistent feedback, faster turnaround, and better insights into student performance.
+            <br /> Upload any PDF, or Word document. Our AI detects exercises, analyzes answers, and guides instructors with smart feedback.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
               Start Grading Now
@@ -78,6 +80,18 @@ export default function Home() {
                 Get insights into student performance trends and identify areas where students need more support.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* intelligent Answer Analysis */}
+      <section className='py-20 px-4 bg-red-200'>
+        <div className="max-w-7xl mx-auto bg-amber-300 flex flex-col md:flex-row">
+          <div className="w-1/2 h-full bg-blue-300">sss</div>
+          <div className='w-1/2 h-full bg-gray-300 flex flex-col justify-center pl-8 gap-5'>
+            <AnswerAnalysis status="CORRECT" question="By burning it" answer="By burning it" />
+            <AnswerAnalysis status="INCORRECT" question="By burning it" answer="By burning it" />
+            <AnswerAnalysis status="CORRECT" question="By burning it" answer="By burning it" />
           </div>
         </div>
       </section>
